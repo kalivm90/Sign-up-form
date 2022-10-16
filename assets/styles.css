@@ -1,1 +1,171 @@
 /* TODO */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --max-height-vp: 100vh;
+    --max-width-vp: 100vw;
+
+    --left-width: 30%;
+    --left-color-f: white;
+
+    --right-width: calc(100% - var(--left-width));
+
+    --button-color: #596D48;
+}
+
+@font-face {
+    font-family: norse;
+    src: url(../assets/font/Norse-Bold.otf);
+}
+
+body {
+    width: var(--max-width-vp);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, 
+.logo-container,
+.main-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body,
+.main-left, 
+.main-right {
+    height: var(--max-height-vp);
+}
+
+
+/* 2 main containers */
+.main-left {
+    flex-direction: column;
+
+    background: url("./images/palm.jpg") center no-repeat;
+    background-size: 100% 100%;
+    width: var(--left-width);
+    /* for footer position */
+    position: relative;
+}
+.main-right {
+    flex-direction: column;
+    justify-content: center; /* here */
+    width: var(--right-width);
+    background-color: #eee;
+}
+
+
+/* .main-left components */
+    /* logo */
+.logo-container {
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 145px;
+    margin-top: 40%;
+    text-align: center;
+}
+.logo-container img {
+    height: 99%;
+}
+.logo-container::after {
+    color: var(--left-color-f);
+    content: "ODIN";
+    font-family: norse;
+    font-size: 100px;
+}
+    /* footer */
+.footer {
+    color: var(--left-color-f);
+    font-weight: 100;
+    font-size: 12px;
+    letter-spacing: .2em;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* main-right container components */
+.main-right > div {
+    width: 100%;
+    padding: 40px;
+}
+/* right header */
+.right-font {
+    font-size: 19px;
+    font-weight: 600;
+}
+.em {font-style: italic;}
+
+.header {padding: 40px;}
+
+
+/* forms */
+.f-container {
+    background-color: var(--left-color-f);
+    padding: 20px 40px;
+    height: 250px;
+    overflow-x: scroll;
+    overflow-y: scroll; /*hidden*/
+}
+#form-header {
+    margin-top: 20px;
+}
+form {
+    width: 60%;
+    margin-top: 10px;
+}
+.row {
+    padding: 4px 8px 4px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+label {
+    color: rgb(59, 59, 59);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+input {
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    height: 22px;
+    padding: 10px;
+}
+
+
+/* // submit button */
+.create-account {
+    margin-bottom: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+}
+#submit {
+    width: 200px;
+    height: 3em;
+    border: none;
+    background-color: var(--button-color);
+    color: var(--left-color-f);
+    border-radius: 5px;
+    font-weight: bold;
+}
+.create-account p {
+    font-size: 14px;
+}
+#link {
+    color: var(--button-color);
+}
+
+/* validation */
+.addValidation {
+    outline: 2px solid rgb(238, 17, 17);
+}

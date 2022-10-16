@@ -4,11 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script src="./assets/script.js"></script>
     <title>Sign-up Form</title>
 </head>
 <body>
+
     <!-- TODO -->
+    <div class="main-left">
+        <div class="logo-container">
+            <img src="./assets/images/odin-lined.png">
+        </div>
+        <div class="footer">
+            <p>kalivm90</p>
+        </div>
+    </div>
+
+
+    <div class="main-right">
+        <div class="header">
+            <p class="right-font">This is not a real online service! You know you need something <br> like this in your life to help you realize your deepest dreams. <br> Sign up <span class="em">now</span> to get started.</p><br>
+            <p class="right-font">You <span class="em">know</span> you want to.</p>
+        </div>
+        <div class="f-container">
+            <p id="form-header" class="right-font">Let's do this!</p>
+            <form action="" method="get" id="my-form">
+                <div class="row">
+                    <div class="item">
+                        <label for="first">First Name</label>
+                        <div>
+                            <input type="text" name="first" id="first" required>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label for="last">Last Name</label>
+                        <div>
+                            <input type="text" name="last" id="last" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <label for="email">Email</label>
+                        <div>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label for="phone">Phone Number</label>
+                        <div>
+                            <input type="tel" name="phone" id="phone" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <label for="password">Password</label>
+                        <div>
+                            <input type="password" name="password" id="password" required>
+                            <p id="error" style="color: red; font-size: 9px; margin-top: 5px;"></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label for="confirm-password">Confrim Password</label>
+                        <div>
+                            <input type="password" name="confirm-password" id="confirm-password" required>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="create-account">
+            <button id="submit" type="submit" form="my-form">Create Account</button>
+            <p>Already have an account? <a id="link" href="">Login</a></p>
+        </div>
+    </div> 
 </body>
 </html>
